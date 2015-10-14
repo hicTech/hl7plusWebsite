@@ -1,0 +1,62 @@
+@import "../less";
+
+.HEADER{
+  .cols();
+
+
+  .hic-content{
+    .cell();
+    .w(180px);
+
+    .hic-label{
+      text-align: center;
+    }
+  }
+  .middle{
+    .flex();
+  }
+  .logo-content{
+    .cell();
+    .w(180px);
+  }
+  .touch-content{
+    .cell();
+    .w(180px);
+  }
+
+  a:link, a:visited {
+    text-decoration: none;
+    color: @color-text-header;
+    font-size: @text-size-header-desktop;
+    &:hover {
+      text-decoration:underline;
+    }
+  }
+
+  @media @onlyScreen and @tablet{
+    a:link, a:visited {
+      font-size: @text-size-header-tablet;
+    }
+  }
+
+  @media @onlyScreen and @mobile{
+    .hic-content{
+      .cell();
+      .w(120px);
+
+    }
+    .logo-content{
+      .cell();
+      .w(120px);
+    }
+    .touch-content{
+      .cell();
+      .w(120px);
+    }
+
+    a:link, a:visited {
+      font-size: @text-size-header-mobile;
+    }
+  }
+
+}

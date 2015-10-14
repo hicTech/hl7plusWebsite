@@ -1,20 +1,65 @@
-@import "../source/core/scaffoldingCssMetrics";
-@import "../source/core/mediaQuery";
-.wrapper-site{
+/*@import "../source/core/scaffoldingCssMetrics";
+@import "../source/core/mediaQuery";*/
+@import "../less";
+
+.wrapper-site {
   .rows();
 
-  .header-page{
-    .cell();
-    .h(100px);
-    background-color:black;
-  }
-  .body-page{
-    .flex();
-  }
-  .footer-page{
+  .header-page {
     .cell();
     .h(80px);
-    background-color: #0000b3;
+    border-bottom: @border-header;
+    background-color: @color-background-header;
+
+    .header-wrapper {
+
+      .HEADER();
+    }
+  }
+  .body-page {
+    .flex();
+
+    .body-wrapper{
+
+      .BODY-PAGES();
+    }
+  }
+  .footer-page {
+    .cell();
+    .h(40px);
+
+    .footer-wrapper{
+
+      .FOOTER();
+    }
+
   }
 
+  @media @onlyScreen and @tablet{
+    .header-page {
+      .cell();
+      .h(70px);
+    }
+
+    .footer-page {
+      .cell();
+      .h(30px);
+
+    }
+
+  }
+
+  @media @onlyScreen and @mobile{
+    .header-page {
+      .cell();
+      .h(50px);
+    }
+
+    .footer-page {
+      .cell();
+      .h(25px);
+
+    }
+
+  }
 }
