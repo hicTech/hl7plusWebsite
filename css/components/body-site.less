@@ -1,43 +1,43 @@
 @import "../less";
 
-.BODY-PAGES{
+.BODY-PAGES {
   .cols();
 
-  .backward-content{
+  .backward-content {
     .flex();
   }
-  .body-center{
+  .body-center {
     .cell();
     .w(@size-w-page-desktop);
 
-    .page-container{
-      width: @size-w-page-desktop;
-      height: @size-h-page-desktop;
-      background-color: #1e6bb8;///////////////////////////////////////////////////////////////////////////////
-      position:relative;
+    .pad-center {
+      .padder-center();
 
-      .page{
+      .page-container {
+        width: @size-w-page-desktop;
+        height: @size-h-page-desktop;
+        position: relative;
 
       }
     }
 
   }
-  .forward-content{
+  .forward-content {
     .flex();
   }
 
-  .container-arrow{
+  .container-arrow {
     width: 100px;
     height: 60px;
     font-size: @size-arrow-desktop;
     text-align: center;
     line-height: 60px;
-    cursor:pointer;
+    cursor: pointer;
   }
 
   @media @onlyScreen and @tablet{
 
-    .body-center{
+    .body-center {
       .cell();
       .w(@size-w-page-tablet);
 
@@ -47,30 +47,36 @@
       }
     }
 
-
-
-
-    .container-arrow{
+    .container-arrow {
       width: 90px;
       font-size: @size-arrow-tablet;
     }
   }
 
   @media @onlyScreen and @mobile{
-    .backward-content{
+    .backward-content {
       display: none;
     }
 
-    .body-center{
+    .body-center {
       .flex();
 
-      .page-container {
-        width: @size-w-page-mobile;
-        height: @size-h-page-mobile;
+      .pad-center {
+
+        .page-container {
+          width: @size-w-page-mobile;
+          height: @size-h-page-mobile;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          bottom: 0px;
+          right: 0px;
+          margin: 0 auto;
+        }
       }
     }
 
-    .forward-content{
+    .forward-content {
       display: none;
     }
   }

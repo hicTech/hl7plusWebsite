@@ -3,6 +3,9 @@
 
 .FOOTER{
   .cols();
+  .backward-content-footer{
+    display: none;
+  }
 
   .start-footer{
     .flex();
@@ -16,14 +19,23 @@
     .circle{
       height: 20px;
       width: 20px;
-      background-color: grey;
+      background-color: @color-circle;
       border-radius: 50%;
       text-align: center;
       line-height: 20px;
+      cursor: pointer;
+      &:hover{
+        background-color:@color-circle-hover;
+      }
+
 
       .number{
-
+        font-size: @size-number-desktop;
+        color: @color-number;
       }
+    }
+    .circle.active{
+      background-color:@color-circle-hover;
     }
 
 
@@ -33,4 +45,83 @@
     .flex();
   }
 
+  .forward-content-footer{
+    display: none;
+  }
+
+  @media @onlyScreen and @tablet{
+
+    .number-page-container{
+      .cell();
+      .w(20px);
+
+      .circle{
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+
+        .number{
+          font-size: @size-number-tablet;
+        }
+      }
+
+    }
+
+  }
+
+  @media @onlyScreen and @mobile{
+    .cols();
+
+    .backward-content-footer{
+      .flex();
+      display: block;
+
+      .container-arrow-footer{
+        .backward-icon{
+          padding-left: 10px;
+          font-size:@size-arrow-footer;
+        line-height: 35px;
+        }
+      }
+
+    }
+
+    .start-footer{
+      display: none;
+    }
+    .end-footer{
+      display: none;
+    }
+    .number-page-container{
+      .cell();
+      .w(15px);
+
+      .circle{
+        height: 10px;
+        width: 10px;
+        line-height: 12px;
+        padding: 1px 1px;
+
+
+        .number{
+          font-size: @size-number-mobile;
+        }
+      }
+    }
+    .forward-content-footer{
+      .flex();
+      display: block;
+
+      .container-arrow-footer{
+
+        .farward-icon{
+          float:right;
+          padding-right: 10px;
+          line-height: 35px;
+          font-size:@size-arrow-footer;
+        }
+      }
+    }
+
+  }
 }

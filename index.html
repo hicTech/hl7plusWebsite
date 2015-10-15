@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/build/component.css">
     <link rel="stylesheet" href="css/build/plugins.css">
 
+    <link rel="stylesheet" href="css/animate.css">
+
     <script src="js/jquery-2.1.1.min.js"></script>
 
     <!--
@@ -68,12 +70,20 @@
                     </div>
                     <div class="body-center">
                         <div class="EXTENDER">
-                            <div class="PADDER-CENTER">
+                            <div class="pad-center">
                                 <div class="page-container">
-                                    <div class="EXTENDER page">ciao</div>
-                                    <div class="EXTENDER page">casa</div>
-                                    <div class="EXTENDER page">bau</div>
-                                    <div class="EXTENDER page">miao</div>
+                                  <!--  <div class="EXTENDER page animated fadeOutLeft">
+                                        <h1>Titolo</h1>
+                                        <h3>Sottotitolo</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur <strong>adipiscing elit</strong>. Nullam et enim in orci feugiat volutpat blandit non tellus. <a>In convallis lobortis tortor</a>, non pharetra nibh. Sed a justo ipsum. Nullam venenatis nibh euismod nisi vestibulum blandit. Integer consequat ligula vitae justo malesuada, id dignissim ex tempor. Ut tristique felis ac ligula hendrerit molestie. Praesent volutpat libero bibendum tortor pellentesque, in scelerisque metus feugiat.</p>
+                                    </div>-->
+                                    <div class="EXTENDER page" style="background-color: blue">
+                                        <h1>Titolo</h1>
+                                        <h3>Sottotitolo</h3>
+                                        <p>La definizione di un <strong>dataritmo</strong> consente ad HL7+ l'implementazione automatica di una vasta serie di funzionalità per il workflow rappresentato tra cui: la gestione <a>RUDEST</a> dei dati, la creazione di un’interfaccia utente cross platform (desktop e mobile), l'interconnessione del sistema in una o più federazioni, la comunicazione dei dati e degli eventi su HL7 FHIR, HL7 v2, Modbus e ulteriori protocolli, e la generazione di specifiche di standard HL7 FHIR e HL7 v2, e di altre forme di documentazione.</p>
+                                        <img src="data:image/jpeg;base64,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">
+                                        <p>La definizione di un <strong>dataritmo</strong> consente ad HL7+ l'implementazione automatica di una vasta serie di funzionalità per il workflow rappresentato tra cui: la gestione <a>RUDEST</a> dei dati, la creazione di un’interfaccia utente cross platform (desktop e mobile), l'interconnessione del sistema in una o più federazioni, la comunicazione dei dati e degli eventi su HL7 FHIR, HL7 v2, Modbus e ulteriori protocolli, e la generazione di specifiche di standard HL7 FHIR e HL7 v2, e di altre forme di documentazione.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -93,21 +103,67 @@
         <div class="footer-page">
             <div class="EXTENDER">
                 <div class="footer-wrapper">
+                    <div class="backward-content-footer">
+                        <div class="EXTENDER">
+                            <div class="container-arrow-footer backward">
+                                <span class="fa fa-chevron-left backward-icon"></span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="start-footer"></div>
                     <div class="number-page-container">
                         <div class="EXTENDER">
                             <div class="PADDER-CENTER">
-                                <div class="circle">
-                                    <span class="number">1</span>
+                                <div class="circle active">
+                                    <div class="number">1</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="number-page-container"></div>
-                    <div class="number-page-container"></div>
-                    <div class="number-page-container"></div>
-                    <div class="number-page-container"></div>
+                    <div class="number-page-container">
+                        <div class="EXTENDER">
+                            <div class="PADDER-CENTER">
+                                <div class="circle">
+                                    <div class="number">2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="number-page-container">
+                        <div class="EXTENDER">
+                            <div class="PADDER-CENTER">
+                                <div class="circle">
+                                    <div class="number">3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="number-page-container">
+                        <div class="EXTENDER">
+                            <div class="PADDER-CENTER">
+                                <div class="circle">
+                                    <div class="number">4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="number-page-container">
+                        <div class="EXTENDER">
+                            <div class="PADDER-CENTER">
+                                <div class="circle">
+                                    <div class="number">5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="end-footer"></div>
+                    <div class="forward-content-footer">
+                        <div class="EXTENDER">
+                            <div class="container-arrow-footer forward">
+                                <span class="fa fa-chevron-right farward-icon"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
