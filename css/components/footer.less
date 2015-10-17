@@ -3,6 +3,8 @@
 
 .FOOTER{
   .cols();
+
+  font-family: Helvetica Neue, Helvetica, Arial;
   .backward-content-footer{
     display: none;
   }
@@ -11,6 +13,8 @@
     .flex();
 
   }
+
+
 
   .number-page-container{
     .cell();
@@ -23,10 +27,7 @@
       border-radius: 50%;
       text-align: center;
       line-height: 20px;
-      cursor: pointer;
-      &:hover{
-        background-color:@color-circle-hover;
-      }
+
 
 
       .number{
@@ -78,9 +79,9 @@
 
       .container-arrow-footer{
         .backward-icon{
-          padding-left: 10px;
-          font-size:@size-arrow-footer;
-        line-height: 35px;
+          padding-left: 15px;
+          font-size: @size-arrow-footer;
+          line-height: 55px;
         }
       }
 
@@ -99,7 +100,7 @@
       .circle{
         height: 10px;
         width: 10px;
-        line-height: 12px;
+        line-height: 10px;
         padding: 1px 1px;
 
 
@@ -115,10 +116,10 @@
       .container-arrow-footer{
 
         .farward-icon{
-          float:right;
-          padding-right: 10px;
-          line-height: 35px;
-          font-size:@size-arrow-footer;
+          float: right;
+          padding-right: 15px;
+          line-height: 55px;
+          font-size: @size-arrow-footer;
         }
       }
     }

@@ -21,6 +21,14 @@
       }
     }
 
+    .page{
+      display: none;
+    }
+
+    .page:first-child{
+      display: block;
+    }
+
   }
   .forward-content {
     .flex();
@@ -33,6 +41,7 @@
     text-align: center;
     line-height: 60px;
     cursor: pointer;
+    opacity: 0.3;
   }
 
   @media @onlyScreen and @tablet{
@@ -48,7 +57,7 @@
     }
 
     .container-arrow {
-      width: 90px;
+      width: 30px;
       font-size: @size-arrow-tablet;
     }
   }
