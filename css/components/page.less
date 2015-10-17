@@ -1,5 +1,24 @@
 @import "../less";
 
-.PAGE{
+.PAGE {
+
+  font-size: 1.3em;
+  color: rgba(0,0,0,0.8);
+
+  h2{
+    color: #000000;
+  }
+
+  span{
+    color: #03abc5;
+    font-weight: bold;
+  }
+
+  .page-padder {
+    @media @onlyScreen and @tablet-and-more{
+      .padder-center();
+    }
+
+  }
 
 }

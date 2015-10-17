@@ -13,12 +13,6 @@
     .pad-center {
       .padder-center();
 
-      .page-container {
-        width: @size-w-page-desktop;
-        height: @size-h-page-desktop;
-        position: relative;
-
-      }
     }
 
     .page{
@@ -54,10 +48,6 @@
       .cell();
       .w(@size-w-page-tablet);
 
-      .page-container {
-        width: @size-w-page-tablet;
-        height: @size-h-page-tablet;
-      }
     }
 
     .container-arrow {
@@ -72,20 +62,13 @@
     }
 
     .body-center {
-      .flex();
+      .cell();
+      .w(@size-w-page-mobile);
+      margin: 0px auto;
 
       .pad-center {
 
-        .page-container {
-          width: @size-w-page-mobile;
-          height: @size-h-page-mobile;
-          position: absolute;
-          top: 0px;
-          left: 0px;
-          bottom: 0px;
-          right: 0px;
-          margin: 0 auto;
-        }
+
       }
     }
 
