@@ -12,17 +12,19 @@
       text-align: center;
     }
   }
-  .middle{
-    .flex();
-  }
+
   .logo-content{
-    .cell();
-    .w(180px);
+    .flex();
+
+    .hic{
+      background-color: red;
+    }
   }
   .touch-content{
     .cell();
     .w(180px);
   }
+
 
   a:link, a:visited {
     text-decoration: none;
@@ -42,16 +44,13 @@
   @media @onlyScreen and @mobile{
     .hic-content{
       .cell();
-      .w(120px);
+      .w(90px);
 
     }
-    .logo-content{
-      .cell();
-      .w(120px);
-    }
+
     .touch-content{
       .cell();
-      .w(120px);
+      .w(110px);
     }
 
     a:link, a:visited {
