@@ -14,8 +14,6 @@
 
   }
 
-
-
   .number-page-container{
     .cell();
     .w(30px);
@@ -74,24 +72,24 @@
     .cols();
 
     .backward-content-footer{
-      .flex();
+      .cell();
+      .w(35px);
       display: block;
 
       .container-arrow-footer{
         .backward-icon{
-          padding-left: 15px;
           font-size: @size-arrow-footer;
-          line-height: 55px;
+          color:@color-arrow-footer;
         }
       }
 
     }
 
     .start-footer{
-      display: none;
+      .flex();
     }
     .end-footer{
-      display: none;
+      .flex();
     }
     .number-page-container{
       .cell();
@@ -116,10 +114,8 @@
       .container-arrow-footer{
 
         .farward-icon{
-          float: right;
-          padding-right: 15px;
-          line-height: 55px;
           font-size: @size-arrow-footer;
+          color:@color-arrow-footer;
         }
       }
     }

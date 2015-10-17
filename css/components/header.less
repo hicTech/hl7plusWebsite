@@ -1,56 +1,118 @@
 @import "../less";
 
-.HEADER{
+.HEADER {
   .cols();
   font-family: Helvetica Neue, Helvetica, Arial;
 
-  .hic-content{
+  .hic-content {
     .cell();
     .w(180px);
 
-    .hic-label{
-      text-align: center;
+    .hic {
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: @color-button-header;
+      a{
+        font-size: @size-text-button;
+      }
+
+      &:hover {
+        background-color: @color-button-hover-header;
+        a {
+          color: @color-text-hover-button;
+        }
+      }
     }
   }
 
-  .logo-content{
+  .logo-content {
     .flex();
 
-    .hic{
-      background-color: red;
+    .hl7{
+      a{
+        cursor: context-menu;
+      }
     }
   }
-  .touch-content{
+  .touch-content {
     .cell();
     .w(180px);
-  }
 
+    .touch{
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: @color-button-header;
+      a{
+        font-size: @size-text-button;
+      }
+
+      &:hover {
+        background-color: @color-button-hover-header;
+        a {
+          color: @color-text-hover-button;
+        }
+      }
+    }
+  }
 
   a:link, a:visited {
     text-decoration: none;
     color: @color-text-header;
     font-size: @text-size-header-desktop;
-    &:hover {
-      text-decoration:underline;
-    }
   }
 
   @media @onlyScreen and @tablet{
     a:link, a:visited {
       font-size: @text-size-header-tablet;
     }
+    .hic-content {
+      .hic {
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color: @color-button-header;
+        a {
+          font-size: @size-text-button-tablet;
+        }
+      }
+    }
+    .touch-content {
+      .touch{
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color: @color-button-header;
+        a {
+          font-size: @size-text-button-tablet;
+        }
+      }
+    }
   }
 
   @media @onlyScreen and @mobile{
-    .hic-content{
+    .hic-content {
       .cell();
       .w(90px);
+      .hic {
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color: @color-button-header;
+        a {
+          font-size: @size-text-button-mobile;
+        }
+      }
 
     }
 
-    .touch-content{
+    .touch-content {
       .cell();
       .w(110px);
+      .touch{
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color: @color-button-header;
+        a {
+          font-size: @size-text-button-mobile;
+        }
+      }
     }
 
     a:link, a:visited {
