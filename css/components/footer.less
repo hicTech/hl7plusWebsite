@@ -1,4 +1,8 @@
-@import "../less";
+@import "../source/core/scaffoldingCssMetrics";
+@import "../source/core/scaffoldingInlineMetrics";
+@import "../source/core/mediaQuery";
+@import "config";
+
 
 
 .FOOTER{
@@ -7,11 +11,11 @@
   font-family: Helvetica Neue, Helvetica, Arial;
   .backward-content-footer{
     display: none;
+    cursor: pointer;
   }
 
   .start-footer{
     .flex();
-
   }
 
   .number-page-container{
@@ -46,6 +50,7 @@
 
   .forward-content-footer{
     display: none;
+    cursor: pointer;
   }
 
   @media @onlyScreen and @tablet{
@@ -73,7 +78,7 @@
 
     .backward-content-footer{
       .cell();
-      .w(35px);
+      .w(55px);
       display: block;
 
       .container-arrow-footer{
@@ -85,12 +90,10 @@
 
     }
 
-    .start-footer{
+    .footer-numbers{
       .flex();
     }
-    .end-footer{
-      .flex();
-    }
+
     .number-page-container{
       .cell();
       .w(13px);
@@ -112,7 +115,8 @@
       }
     }
     .forward-content-footer{
-      .flex();
+      .cell();
+      .w(55px);
       display: block;
 
       .container-arrow-footer{

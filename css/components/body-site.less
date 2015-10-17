@@ -1,4 +1,7 @@
-@import "../less";
+@import "../source/core/scaffoldingCssMetrics";
+@import "../source/core/scaffoldingInlineMetrics";
+@import "config";
+@import "page";
 
 .BODY-PAGES {
   .cols();
@@ -42,6 +45,13 @@
     opacity: 0.3;
   }
 
+  .poster{
+    background-image: url("../../poster.png");
+    width: 350px;
+    height: 575px;
+    background-size: 350px 575px;
+  }
+
   @media @onlyScreen and @tablet{
 
     .body-center {
@@ -53,6 +63,12 @@
     .container-arrow {
       width: 30px;
       font-size: @size-arrow-tablet;
+    }
+
+    .poster{
+      width: 275px;
+      height: 452px;
+      background-size: 275px 452px;
     }
   }
 
@@ -75,5 +91,19 @@
     .forward-content {
       display: none;
     }
+
+    .poster{
+      width: 180px;
+      height: 296px;
+      background-size: 180px 296px;
+      margin: 20px auto;
+    }
+
+
   }
+
+
+
 }
+
+

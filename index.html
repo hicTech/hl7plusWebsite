@@ -29,6 +29,8 @@
         body:before {
             display: none;
         }
+
+
     </style>
 
 </head>
@@ -75,6 +77,25 @@
                         </div>
                     </div>
                     <div class="body-center">
+
+
+
+
+
+                        <div class="EXTENDER page">
+                            <div class="page-padder">
+                                <div style="text-align: justify">
+                                    <div class="poster"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
 
                         <div class="EXTENDER page">
                             <div class="page-padder">
@@ -243,6 +264,7 @@
         <div class="footer-page">
             <div class="EXTENDER">
                 <div class="footer-wrapper">
+
                     <div class="backward-content-footer">
                         <div class="EXTENDER">
                             <div class="PADDER-CENTER">
@@ -253,9 +275,15 @@
                         </div>
                     </div>
 
-                    <div class="start-footer"></div>
+                    <div class="footer-numbers">
+                        <div class="EXTENDER">
+                            <div class="PADDER-CENTER">
+                                <div class="COLS JUS-CENTER numbers-target">
 
-                    <div class="end-footer"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="forward-content-footer">
                         <div class="EXTENDER">
@@ -290,11 +318,11 @@
         $backward_button.hide();
 
         var $pages = $(".page");
-        var $end_footer = $(".end-footer");
+        var $numbers_target = $(".numbers-target");
 
 
         $pages.each(function (index) {
-            $end_footer.before(getNumberHtml(index + 1));
+            $numbers_target.append(getNumberHtml(index + 1));
         });
 
         $(".number-page-container").eq(0).find(".circle").addClass("active");
